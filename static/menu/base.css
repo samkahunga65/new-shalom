@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+  }
+html {
+    position: relative;
+    min-height: 100%;
+}
+nav .con {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    background: none;
+    align-items: space-between;
+    
+}
+nav .con ul {
+    padding-top: 10px;
+    
+}
+nav .con li {
+    padding-left: 30px;
+}
+body {
+    background-color: rgb(103, 107, 107);
+}
+.jumbotron {
+    /* margin: 0;
+    padding: 0%; */
+    height: 50vh;
+    /* background-image: url('/static/menu/img/githeri.jpg'); */
+    background-size: cover;
+    color: white;
+}
+.navbar li {
+    margin-left: 30px;
+}
+ 
+button{
+    color: cornsilk;
+}
+footer {
+    background-color: rgb(99, 96, 96);
+    text-align: center;
+    color: white;
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5vh;
+    width: 100%;
+    overflow: hidden;
+}
+footer p{
+    margin: auto;
+    padding-top: 3px;
+}

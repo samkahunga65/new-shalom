@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+  }
+
+  nav .con {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    background: none;
+    align-items: space-between;
+    
+}
+nav .con ul {
+    padding-top: 10px;
+    
+}
+nav .con li {
+    padding-left: 30px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 33%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    transition: transform .2s;
+  }
+  /* Container needed to position the button. Adjust the width as needed */
+.container {
+    position: relative;
+    width: 50%;
+  }
+  
+  /* Make the image responsive */
+  .container img {
+    position: static;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+  }
+
+
+  .container button {
+    
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    /* transform: translate(0%, -50%);
+    -ms-transform: translate(-50%, -50%); */
+    transition: z-index .35s ease;
+    z-index: 0;
+  }
+
+
+  .title {
+    position: absolute;
+    
+    left: 30;
+    top: 100px;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    z-index: 1;
+    transition: top .5s ease;
+  }
+  .btn-outline-danger{
+    background-color: rgb(255, 255, 255);
+    background: white;
+    color: white;
+    border: white;
+  }
+  
+  .container button:hover {
+    z-index: 2;
+  }
+
+  .column img:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }

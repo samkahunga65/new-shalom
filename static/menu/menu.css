@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+* {
+    font-family: 'Roboto', ;
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .container {
+    flex: 30%;
+    position: relative;
+    margin-top: 50px;
+    width: 400px;
+    height: 240px;
+    font-family: 'Roboto', ;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.5s ease;
+  }
+  .container p {
+    font-family: 'Roboto', ;
+  }
+  
+  .container:hover .overlay {
+    display: block;
+    background: rgba(0, 0, 0, .3);
+  }
+  
+  img {
+    position: absolute;
+    width: 400px;
+    height: 240px;
+    left: 0;
+  }
+  
+  .title {
+    font-family: 'Roboto', ;
+    position: absolute;
+    width: 500px;
+    left: 0;
+    top: 120px;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    z-index: 1;
+    transition: top .5s ease;
+  }
+  
+  .container:hover .title {
+    top: 90px;
+    font-family: 'Roboto', ;
+  }
+  
+  .button {
+    position: absolute;
+    width: 500px;
+    left:0;
+    top: 180px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .35s ease;
+  }
+  
+  .button a {
+    font-family: 'Roboto', ;
+    text-decoration: none;
+    font-size: 1.2em;
+    width: 200px;
+    padding: 12px 48px;
+    text-align: center;
+    color: white;
+    border: solid 1px white;
+    border-radius: 2px;
+    z-index: 1;
+  }
+  
+  .container:hover .button {
+    opacity: 1;
+  }
+  .button a:hover{
+    background-color: rgb(255, 147, 6);
+    border: rgb(255, 147, 6);
+    color: rgb(255, 255, 255);
+  }
+  @media all and (max-width: 1000px){
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    .container {
+        flex: 100%;
+        /* position: relative; */
+        margin-top: 50px;
+        width: 200px;
+        height: 120px;
+      }
+      img {
+        position: absolute;
+        width: 400px;
+        height: 240px;
+        left: 0;
+      }
+  }
+  
