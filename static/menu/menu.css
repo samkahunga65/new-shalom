@@ -2,10 +2,6 @@
 * {
     font-family: 'Roboto', ;
 }
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-  }
   
   .container {
     flex: 30%;
@@ -96,6 +92,7 @@
     .flex {
         display: flex;
         flex-wrap: wrap;
+        margin: 0px 100px;
       }
     .container {
         flex: 100%;

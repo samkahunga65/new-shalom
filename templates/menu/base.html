@@ -8,20 +8,52 @@
     {%block css%}
     {%endblock%}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
     <title>Shalom</title>
 </head>
 <body>
-    {%block nav%}
-    {%endblock%}
-    
+  {% block top_kabisa %}
+  {% endblock %}
+  <div class="container-fluid">
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+          <img src="{%static 'menu/img/shalom_logo.png'%}" width="70" height="50" class="d-inline-block align-top" alt="">
+        </a>
+        {% if user.is_authenticated %}
+        <ul class="nav ml-auto nav-pills">
+          <li>
+            <form class="logout_form" action="{% url 'accounts:logout' %}" method="post">
+              {% csrf_token %}
+              <button class="button" type="submit">logout</button>
+            </form>
+          </li>
+        </ul>
+        {% else %}
+        <ul class="nav ml-auto nav-pills">
+          <li>
+            <form class="logout_form" action="{% url 'accounts:signup' %}" method="post">
+              {% csrf_token %}
+              <button class="btn btn-primary" type="submit">signup</button>
+            </form>
+          </li>
+          <p>or</p>
+          <form class="logout_form" action="{% url 'accounts:login' %}" method="post">
+            {% csrf_token %}
+            <button class="btn btn-primary" type="submit">login</button>
+          </form>
+        {% endif %}
+      </nav>   
     {%block jumbo%}
     {%endblock%}
+  </div>
     <div class="container" style="margin: 0px 30px;">
     {%block content%}
     {%endblock%}
     </div>
-    {%block footer%}
-    {%endblock%}
+    <footer>
+        <p>@2020 ShalomⒸ</p>
+    </footer>
     
 </body>
 </html>
